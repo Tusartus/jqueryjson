@@ -9,7 +9,7 @@
 <body>
     
 
-
+ <div id="weergave"></div>
     
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
@@ -18,10 +18,10 @@ $(document).ready(function() {
 
   $.getJSON("https://jqueryjson.netlify.app/cars.json", function(data){
       $.each(data, function (i, value) {
-          let line="<p>"+i + " " + 
-         value.company + " " + value.product + " " + value.color + "</p>";
-       $("#weergave").append(line);
-          console.log(value);
+        $('#weergave').append('<p>'+value+'</p>');
+        console.log(value);
+
+         
       });
   });
 
