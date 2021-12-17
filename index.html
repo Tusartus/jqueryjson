@@ -23,15 +23,16 @@ $(document).ready(function() {
   
     
 
-       let html = "<h1> Vintages cars</h1>"; 
+       let title = "<h1> Vintages cars</h1>"; 
     
-    
-           html +="<h2>" +  value.company  + "</h2>" + "<br>";
+       $('#weergave').append('<p>'+ title +'</p>');
+
+           let html ="<h2>" +  value.company  + "</h2>" + "<br>";
            html +="<p> Name :  " +  value.product  + "</p>" + "<br>";
           
            html +="<p> Color:" +  value.color  + "</p>" + "<br>";
            html +="<p> Extra info : " +  value.extra  + "</p>" + "<br>";
-           html += "<img src=' " + value.img  + " ' width='300' height='350'>";
+           html += "<img src=' "+value.img+"' width='300' height='350'>";
            html +="<hr>";
          
 
