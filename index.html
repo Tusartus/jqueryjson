@@ -18,12 +18,24 @@ $(document).ready(function() {
 
   $.getJSON("https://jqueryjson.netlify.app/cars.json", function(data){
       $.each(data, function (i, value) {
-        $('#weergave').append('<p>'+value+'</p>');
+        //$('#weergave').append('<p>'+value+'</p>');
         console.log(value);
+  
+    //"company"  "product" "color"   "extra"    "img"
+
+        let line="<p>" +  value.product  + "</p>" + "<br>";
+           line+="<p>" +  value.company  + "</p>" + "<br>";
+           line+="<p>" +  value.color  + "</p>" + "<br>";
+           line+="<p>" +  value.extra  + "</p>" + "<br>";
+           //line+="<p>" +  value.product  + "</p>" + "<br>";
+
+
+                      $("#weergave").append(line);
+          });
 
          
       });
-  });
+  
 
 
 
