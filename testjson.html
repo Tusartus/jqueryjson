@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div id="weergave"></div>
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+
+$(document).ready(function() {
+
+
+    $.getJSON("C:/Users/arthu/OneDrive/Documenten/cvolearn/jquerylearn/json/01 json-cars-start/01 json-cars-start/cars.json", function(data){
+        $.each(data, function (index, value) {
+            let line="<p>"+i + " " + 
+ value.company + " " + value.product + " " + value.color+ "</p>";
+       	$("#weergave").append(line);
+            //console.log(value);
+        });
+    });
+
+    /*
+    $.getJSON("users.json",
+function(data) {
+  	$.each(data.people, function(i,person){
+        	let line="<p>"+i + " " + 
+Person.firstname + " " + person.lastname + " " + person.mail + "</p>";
+       	$("#weergave").append(line);
+    });
+});
+
+*/
+
+
+
+});
+
+    </script>
+
+</body>
+</html>
