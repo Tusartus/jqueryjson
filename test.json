@@ -1,0 +1,13 @@
+{   "people" : [
+    {   "firstname" : "Bert",
+        "lastname" : "Appel" ,
+        "mail" : "bappel@eschool.be"
+    },
+    {   "firstname" : "Jan",
+        "lastname" : "Peers" ,
+        "mail" : "jpeers@eschool.be"
+    },
+    {   "firstname" : "Erik",
+        "lastname" : "Pruim" ,
+        "mail" : "epruim@eschool.be"
+    }   ] }
