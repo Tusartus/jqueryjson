@@ -18,19 +18,25 @@ $(document).ready(function() {
 
   $.getJSON("https://jqueryjson.netlify.app/cars.json", function(data){
       $.each(data, function (i, value) {
-        //$('#weergave').append('<p>'+value+'</p>');
+        
         console.log(value);
   
-    //"company"  "product" "color"   "extra"    "img"
+    
 
-        let line="<p>" +  value.product  + "</p>" + "<br>";
-           line+="<p>" +  value.company  + "</p>" + "<br>";
-           line+="<p>" +  value.color  + "</p>" + "<br>";
-           line+="<p>" +  value.extra  + "</p>" + "<br>";
-           //line+="<p>" +  value.product  + "</p>" + "<br>";
+       let html = "<h1> Vintages cars</h1>"; 
+    
+    
+           html +="<h2>" +  value.company  + "</h2>" + "<br>";
+           html +="<p> Name :  " +  value.product  + "</p>" + "<br>";
+          
+           html +="<p> Color:" +  value.color  + "</p>" + "<br>";
+           html +="<p> Extra info : " +  value.extra  + "</p>" + "<br>";
+           html += "<img src=' " + value.img  + " ' width='300' height='350'>";
+           html +="<hr>";
+         
 
 
-                      $("#weergave").append(line);
+                      $("#weergave").append(html);
           });
 
          
