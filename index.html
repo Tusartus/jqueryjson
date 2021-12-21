@@ -17,15 +17,17 @@
 $(document).ready(function() {
 
   $.getJSON("https://jqueryjson.netlify.app/cars.json", function(data){
+    let title = "<h1> Vintages cars</h1>"; 
+    
+    $('#weergave').append('<p>'+ title +'</p>');
+    
       $.each(data, function (i, value) {
         
         console.log(value);
   
     
 
-       let title = "<h1> Vintages cars</h1>"; 
-    
-       $('#weergave').append('<p>'+ title +'</p>');
+     
 
            let html ="<h2>" +  value.company  + "</h2>" + "<br>";
            html +="<p> Name :  " +  value.product  + "</p>" + "<br>";
